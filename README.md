@@ -227,4 +227,4 @@ curl http://localhost:9200/news/_search
 
 ## 8. License
 
-MIT License
+UNLICENSED
