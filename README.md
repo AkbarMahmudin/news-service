@@ -1,4 +1,4 @@
-# News Microservices Platform
+# Mini Project Sistem Manajemen Berita
 
 Sistem **microservices News** berbasis **NestJS**, **PostgreSQL (Prisma)**, **RabbitMQ**, dan **Elasticsearch**. Arsitektur dirancang mengikuti prinsip **SOLID**, event-driven, dan scalable.
 
@@ -38,25 +38,30 @@ Service yang tersedia:
 | RabbitMQ UI   | [http://localhost:15672](http://localhost:15672) |
 | Elasticsearch | [http://localhost:9200](http://localhost:9200)   |
 
+> Catatan:
+>
+> - Pastikan file `.env` telah dibuat
+> - Ikuti step **2** untuk menyiapkan file `.env`
+
 ---
 
 ## 2. Konfigurasi Environment
 
-Buat file `.env` di root project:
+Buat file `.env` di root project atai copy paster file `.env.example`:
 
 ```env
 # API PORT
 PORT=3000
 
 # DATABASE
-DATABASE_URL="postgresql://secretiveplotter:root@postgres:5432/news_app"
+DATABASE_URL="postgresql://root:password123!@postgres:5432/news_app"
 
 # RABBITMQ
 RABBIT_MQ_URI=amqp://rabbitmq:5672
 RABBIT_MQ_NEWS_QUEUE=news
 
 # ELASTICSEARCH
-ELASTIC_URL: http://elasticsearch:9200
+ELASTIC_URL=http://elasticsearch:9200
 ```
 
 > Catatan:
