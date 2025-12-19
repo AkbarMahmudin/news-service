@@ -1,0 +1,21 @@
+generator client {
+  provider   = "prisma-client"
+  output     = "../apps/api/generated/prisma"
+  engineType = "client"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model News {
+  id        Int      @id @default(autoincrement())
+  title     String   @db.VarChar(50)
+  content   String
+  author    String   @db.VarChar(50)
+  source    String   @db.VarChar(100)
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamp(6)
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("news")
+}
